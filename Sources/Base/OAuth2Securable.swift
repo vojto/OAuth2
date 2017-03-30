@@ -130,7 +130,7 @@ open class OAuth2Securable: OAuth2Requestable {
 	}
 	
 	/** Updates instance properties according to the items found in the given dictionary, which was found in the keychain. */
-	func updateFromKeychainItems(_ items: [String: Any]) {
+	open func updateFromKeychainItems(_ items: [String: Any]) {
 	}
 	
 	/**
