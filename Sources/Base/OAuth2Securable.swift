@@ -166,7 +166,7 @@ open class OAuth2Securable: OAuth2Requestable {
 	}
 	
 	/** Stores our current token(s) in the keychain. */
-	public func storeTokensToKeychain() {
+	open func storeTokensToKeychain() {
 		if let items = storableTokenItems() {
 			logger?.debug("OAuth2", msg: "Storing tokens to keychain")
 			let keychain = OAuth2KeychainAccount(oauth2: self, account: keychainAccountForTokens, data: items)
