@@ -107,7 +107,7 @@ open class OAuth2Securable: OAuth2Requestable {
 	}
 	
 	/** Queries the keychain for tokens stored for the receiver's authorize URL, and updates the token properties accordingly. */
-	private func updateFromKeychain() {
+	open func updateFromKeychain() {
 		logger?.debug("OAuth2", msg: "Looking for items in keychain")
 		
 		do {
